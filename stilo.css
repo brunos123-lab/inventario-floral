@@ -4068,4 +4068,206 @@ header h1 {
     cursor: pointer;
 }
 
+/* =========================================================
+   📱 DISEÑO RESPONSIVE PARA CELULARES
+   ========================================================= */
+
+html,
+body {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+}
+
+/* TODOS LOS CONTENEDORES PRINCIPALES */
+
+.app,
+.nuevo-material-app,
+.nuevo-ramo-app,
+.mis-ramos-app,
+.cotizador-app {
+    width: 100% !important;
+    max-width: 393px;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
+
+/* IMÁGENES */
+
+img {
+    max-width: 100%;
+}
+
+/* CONTENIDOS */
+
+.contenido,
+.materiales-contenido,
+.nuevo-material-contenido,
+.nuevo-ramo-contenido,
+.mis-ramos-contenido,
+.cotizador-contenido {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* BARRA INFERIOR */
+
+.barra-inferior,
+.nuevo-ramo-app .barra-inferior,
+.mis-ramos-app .barra-inferior {
+    width: 100% !important;
+    max-width: 393px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    box-sizing: border-box !important;
+}
+
+/* MODAL */
+
+.modal-nueva-flor {
+    width: 100% !important;
+    max-width: 393px !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    box-sizing: border-box !important;
+}
+
+/* TARJETAS */
+
+.tarjeta,
+.tarjeta-material,
+.material-card,
+.tarjeta-flor,
+.tarjeta-ramo,
+.tarjeta-producto-ramo,
+.item-cotizador {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* EVITAR QUE EL TEXTO O ELEMENTOS SE SALGAN */
+
+.informacion,
+.material-info,
+.datos-material,
+.datos-flor,
+.datos-ramo,
+.datos-producto-ramo,
+.info-item-cotizador {
+    min-width: 0 !important;
+}
+
+/* =========================================================
+   📱 CELULARES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 392px) {
+
+    .contenido {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .materiales-contenido {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .nuevo-material-contenido {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .nuevo-ramo-contenido {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .mis-ramos-contenido {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .cotizador-contenido {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    /* TARJETAS CON IMAGEN */
+
+    .imagen-ramo,
+    .imagen-flor-tarjeta {
+        width: 80px !important;
+        height: 90px !important;
+    }
+
+    .imagen-producto-ramo {
+        width: 55px !important;
+        min-width: 55px !important;
+        height: 55px !important;
+    }
+
+    /* TEXTO */
+
+    .datos-ramo h3,
+    .datos-flor h3 {
+        font-size: 18px !important;
+    }
+
+    .datos-ramo p,
+    .datos-flor p {
+        font-size: 13px !important;
+    }
+
+    /* BIENVENIDA */
+
+    .texto-bienvenida,
+    .contenido-bienvenida {
+        width: 250px !important;
+        max-width: calc(100% - 100px) !important;
+    }
+
+    .texto-bienvenida h2,
+    .contenido-bienvenida h2 {
+        font-size: 29px !important;
+    }
+
+    .texto-bienvenida p,
+    .contenido-bienvenida p {
+        font-size: 16px !important;
+    }
+
+    .rama {
+        width: 55px !important;
+    }
+
+    .rama-izquierda {
+        left: 5px !important;
+    }
+
+    .rama-derecha {
+        right: 5px !important;
+    }
+
+    /* MANO DE OBRA */
+
+    .mano-obra-contenido {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .mano-obra-ramo .boton-cotizar {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}
+
 
