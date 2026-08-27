@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mis flores</title>
+
+    <link rel="stylesheet" href="stilo.css">
+</head>
+
+<body>
+
+    <div class="app materiales-app">
+
+        <!-- ENCABEZADO -->
+
+        <header class="materiales-header">
+
+            <button class="boton-regresar" onclick="volverInicio()">
+                ←
+            </button>
+
+            <h1>Mis flores</h1>
+
+            <button class="boton-agregar" onclick="agregarFlor()">
+                +
+            </button>
+
+        </header>
+
+
+        <!-- CONTENIDO -->
+
+        <main class="materiales-contenido">
+
+            <!-- BUSCADOR -->
+
+            <div class="buscador">
+
+                <span class="icono-busqueda">⌕</span>
+
+                <input
+                    type="text"
+                    placeholder="Buscar flor..."
+                >
+
+            </div>
+
+
+            <!-- BOTÓN AGREGAR -->
+
+            <button
+                class="boton-agregar-material"
+                onclick="agregarFlor()"
+            >
+                <span>＋</span>
+                Agregar flor
+            </button>
+
+
+            <!-- LISTA DE FLORES -->
+
+            <div id="listaFlores" class="lista-materiales">
+
+                <!-- Por ahora estará vacío -->
+
+                <div class="sin-materiales">
+
+                    <div class="icono-vacio">
+                        🌸
+                    </div>
+
+                    <p>No hay flores registradas</p>
+
+                    <span>
+                        Agrega tu primera flor
+                    </span>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- BARRA INFERIOR -->
+
+        <nav class="barra-inferior">
+
+            <button onclick="volverInicio()">
+                🏠
+            </button>
+
+            <button onclick="irMateriales()">
+                📦
+            </button>
+
+            <button>
+                🌸
+            </button>
+
+            <button>
+                ⚙️
+            </button>
+
+        </nav>
+
+    </div>
+
+    <!-- ===================================== -->
+<!-- VENTANA NUEVA FLOR -->
+<!-- ===================================== -->
+
+<div id="modalNuevaFlor" class="modal-nueva-flor">
+
+    <div class="formulario-nueva-flor">
+
+        <!-- CABECERA -->
+        <div class="cabecera-nueva-flor">
+            <h2>Nueva flor</h2>
+
+            <button
+                class="cerrar-flor"
+                onclick="cerrarNuevaFlor()">
+                ×
+            </button>
+        </div>
+
+
+        <!-- FOTO -->
+        <label class="foto-nueva-flor">
+
+            <input
+                type="file"
+                id="fotoFlor"
+                accept="image/*"
+                hidden
+            >
+
+            <span class="mas-foto">＋</span>
+
+            <span>
+                Agregar fotografía
+                <small>(opcional)</small>
+            </span>
+
+        </label>
+
+
+        <!-- NOMBRE -->
+        <div class="campo-flor">
+
+            <label>Nombre de la flor</label>
+
+            <input
+                type="text"
+                id="nombreFlor"
+                placeholder="Ej. Tulipán"
+            >
+
+        </div>
+
+
+        <!-- MATERIALES -->
+        <div class="campo-flor">
+
+            <label>Materiales utilizados</label>
+
+            <div id="listaMaterialesFlor"
+                 class="lista-materiales-flor">
+
+                <!-- AQUÍ SALDRÁN AUTOMÁTICAMENTE
+                     TUS MATERIALES GUARDADOS -->
+
+            </div>
+
+        </div>
+
+
+        <!-- CALCULAR -->
+        <button
+            class="calcular-flor"
+            onclick="calcularFlor()">
+
+            Calcular
+
+        </button>
+
+
+        <!-- TOTAL -->
+        <div class="resultado-flor">
+
+            <span>Costo de la flor</span>
+
+            <strong id="costoTotalFlor">
+                S/ 0.00
+            </strong>
+
+        </div>
+
+
+        <!-- GUARDAR -->
+       <button
+    class="guardar-flor"
+    onclick="guardarFlor()">
+
+    Guardar flor
+
+</button>
+
+    </div>
+
+</div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+
+
+</html>

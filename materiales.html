@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mis materiales</title>
+
+    <link rel="stylesheet" href="stilo.css">
+</head>
+
+<body>
+
+    <div class="app materiales-app">
+
+        <!-- ENCABEZADO -->
+
+        <header class="materiales-header">
+
+            <button class="boton-regresar" onclick="volverInicio()">
+                ←
+            </button>
+
+            <h1>Mis materiales</h1>
+
+            <button class="boton-agregar" onclick="agregarMaterial()">
+                +
+            </button>
+
+        </header>
+
+
+        <!-- CONTENIDO -->
+
+        <main class="materiales-contenido">
+
+            <!-- BUSCADOR -->
+
+            <div class="buscador">
+
+                <span class="icono-busqueda">⌕</span>
+
+                <input
+                    type="text"
+                    placeholder="Buscar material..."
+                >
+
+            </div>
+
+
+            <!-- BOTÓN AGREGAR -->
+
+            <button
+            class="boton-agregar-material"
+            onclick="abrirNuevoMaterial()"
+            >
+                <span>＋</span>
+                Agregar material
+            </button>
+
+
+            <!-- LISTA DE MATERIALES -->
+
+            <div id="listaMateriales" class="lista-materiales">
+
+                <!--
+                    AQUÍ APARECERÁN LOS MATERIALES
+                    CUANDO LOS AGREGUEMOS.
+
+                    Por ahora está vacío.
+                -->
+
+                <div class="sin-materiales">
+
+                    <div class="icono-vacio">
+                        📦
+                    </div>
+
+                    <p>No hay materiales registrados</p>
+
+                    <span>
+                        Agrega tu primer material
+                    </span>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- BARRA INFERIOR -->
+
+        <nav class="barra-inferior">
+
+            <button onclick="volverInicio()">
+                🏠
+            </button>
+
+            <button>
+                📦
+            </button>
+
+            <button>
+                🧮
+            </button>
+
+            <button>
+                ⚙️
+            </button>
+
+        </nav>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Mis ramos</title>
+
+    <link rel="stylesheet" href="stilo.css">
+
+</head>
+
+
+<body>
+
+<div class="app mis-ramos-app">
+
+    <!-- =====================================
+         ENCABEZADO
+    ====================================== -->
+
+    <header class="mis-ramos-header">
+
+        <button
+            class="boton-regresar"
+            onclick="volverInicio()"
+        >
+            ←
+        </button>
+
+        <h1>Mis ramos</h1>
+
+        <div class="espacio-header"></div>
+
+    </header>
+
+
+    <!-- =====================================
+         CONTENIDO
+    ====================================== -->
+
+    <main class="mis-ramos-contenido">
+
+        <div class="titulo-mis-ramos">
+
+            <span>🌸</span>
+
+            <div>
+                <h2>Mis ramos guardados</h2>
+
+                <p>
+                    Aquí encontrarás tus ramos guardados.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- LISTA DE RAMOS -->
+
+        <div
+            id="listaRamos"
+            class="lista-ramos"
+        >
+        </div>
+
+
+    </main>
+
+
+    <!-- =====================================
+         BARRA INFERIOR
+    ====================================== -->
+
+    <nav class="barra-inferior">
+
+        <button onclick="volverInicio()">
+            🏠
+        </button>
+
+        <button onclick="irMateriales()">
+            📦
+        </button>
+
+        <button onclick="irFlores()">
+            🌸
+        </button>
+
+        <button onclick="irMisRamos()">
+            🌷
+        </button>
+
+    </nav>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario Floral</title>
+    <link rel="stylesheet" href="stilo.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ENCABEZADO -->
+        <header class="header">
+
+            <div class="titulo-principal">
+    <h1>Inventario Floral</h1>
+
+</div>
+
+        </header>
+
+        <!-- CONTENIDO -->
+        <main class="contenido">
+
+          <!-- DECORACIÓN SUPERIOR -->
+
+<section class="bienvenida">
+
+    <img
+        src="img/olivo-izquierdo.png"
+        class="rama rama-izquierda"
+        alt=""
+    >
+
+    <div class="contenido-bienvenida">
+
+        <h2>Bienvenida</h2>
+
+        <div class="corazon-bienvenida">
+            <span></span>
+            ♥
+            <span></span>
+        </div>
+
+        <p>
+            Organiza tus materiales,<br>
+            crea flores y calcula<br>
+            el precio de tus ramos
+        </p>
+
+    </div>
+
+    <img
+        src="img/olivo-derecho.png"
+        class="rama rama-derecha"
+        alt=""
+    >
+
+</section>
+
+
+            <!-- MATERIAL -->
+            <div class="tarjeta" onclick="irMateriales()">
+
+                <div class="icono">
+                    <img
+                    src="img/materiales.png"
+                     class="imagen-ilustracion"
+                        alt="Materiales"
+                        >
+                </div>
+
+                <div class="informacion">
+                    <h3>Materiales</h3>
+
+                    <p>
+                        Administra tus insumos<br>
+                        y costos unitarios.
+                    </p>
+                </div>
+
+                <button class="flecha" onclick="irMateriales(event)">
+                    →
+                </button>
+
+            </div>
+
+
+            <!-- FLORES -->
+            <div class="tarjeta" onclick="irFlores()">
+
+               <div class="icono">
+                <img
+                    src="img/flores.png"
+                    class="imagen-ilustracion"
+                    alt="Flores"
+                    >
+                </div>
+
+                <div class="informacion">
+                    <h3>Flores</h3>
+
+                    <p>
+                        Crea tus flores y<br>
+                        calcula tu costo
+                    </p>
+                </div>
+
+                <button class="flecha" onclick="irFlores(event)">
+                    →
+                </button>
+
+            </div>
+
+
+            <!-- COTIZADOR -->
+            <div class="tarjeta" onclick="irCotizador()">
+
+               <div class="icono">
+    <img
+        src="img/cotizador.png"
+        class="imagen-ilustracion"
+        alt="Cotizador"
+    >
+</div>
+
+                <div class="informacion">
+                    <h3>Cotizador</h3>
+
+                    <p>
+                        Arma tu ramo y calcula<br>
+                        cuanto cobrar.
+                    </p>
+                </div>
+
+                <button class="flecha" onclick="irCotizador(event)">
+                    →
+                </button>
+
+            </div>
+
+            <!-- MIS RAMOS -->
+<div class="tarjeta" onclick="irMisRamos()">
+
+    <div class="icono">
+        <div class="imagen-ilustracion icono-mis-ramos">
+            🌷
+        </div>
+    </div>
+
+    <div class="informacion">
+
+        <h3>Mis ramos</h3>
+
+        <p>
+            Consulta tus ramos<br>
+            guardados.
+        </p>
+
+    </div>
+
+    <button
+        class="flecha"
+        onclick="irMisRamos(event)"
+    >
+        →
+    </button>
+
+</div>
+
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

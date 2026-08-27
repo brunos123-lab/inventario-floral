@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Nuevo ramo</title>
+
+    <link rel="stylesheet" href="stilo.css">
+
+</head>
+
+
+<body>
+
+<div class="app nuevo-ramo-app">
+
+    <header class="nuevo-ramo-header">
+
+        <button
+            class="boton-regresar"
+            onclick="volverInicio()"
+        >
+            ←
+        </button>
+
+        <h1>Nuevo ramo</h1>
+
+        <button
+            class="boton-eliminar-ramo"
+            onclick="cancelarCotizador()"
+        >
+            🗑️
+        </button>
+
+    </header>
+
+
+    <main class="nuevo-ramo-contenido">
+
+        <!-- FLORES -->
+
+        <section
+            class="seccion-ramo"
+            id="seccionFlores"
+        >
+
+            <h2>🌸 Flores del ramo</h2>
+
+            <div
+                id="floresSeleccionadas"
+                class="lista-ramo"
+            ></div>
+
+        </section>
+
+
+        <!-- MATERIALES -->
+
+        <section
+            class="seccion-ramo"
+            id="seccionMateriales"
+        >
+
+            <h2>🎀 Materiales adicionales</h2>
+
+            <div
+                id="materialesSeleccionados"
+                class="lista-ramo"
+            ></div>
+
+        </section>
+
+
+        <!-- MANO DE OBRA -->
+
+        <section class="mano-obra-ramo">
+
+            <h2>🧵 Mano de obra</h2>
+
+            <div class="mano-obra-contenido">
+
+    <div>
+        <span>Tiempo estimado</span>
+        <strong>30 min</strong>
+    </div>
+
+    <div>
+        <span>Costo</span>
+        <div class="campo-mano-obra">
+        <span>S/</span>
+    <input
+        type="number"
+        id="costoManoObra"
+        value="5"
+        min="0"
+        step="0.10"
+    >
+</div>
+
+<button
+    type="button"
+    class="boton-cotizar"
+    onclick="cotizarRamo()"
+>
+    Cotizar
+</button>
+
+        </div>
+
+</div>
+
+        </section>
+
+
+        <!-- RESUMEN -->
+
+      <div class="contenedor-resumen">
+
+    <section class="resumen-ramo">
+
+        <h2>RESUMEN</h2>
+
+        <div class="fila-resumen">
+            <span>Subtotal flores</span>
+            <strong id="subtotalFlores">
+                S/ 0.00
+            </strong>
+        </div>
+
+        <div class="fila-resumen">
+            <span>Subtotal materiales</span>
+            <strong id="subtotalMateriales">
+                S/ 0.00
+            </strong>
+        </div>
+
+        <div class="fila-resumen">
+            <span>Mano de obra</span>
+            <strong id="resumenManoObra">
+                S/ 5.00
+            </strong>
+        </div>
+
+        <hr>
+
+        <div class="fila-resumen total-final">
+            <span>COSTO TOTAL</span>
+
+            <strong id="costoTotalRamo">
+                S/ 0.00
+            </strong>
+        </div>
+
+    </section>
+
+</div>
+
+
+        <!-- GUARDAR -->
+
+        <button
+            class="guardar-cotizacion-final"
+            onclick="guardarCotizacionFinal()"
+        >
+            Guardar cotización
+        </button>
+
+        <!-- =========================================
+     VENTANA PARA GUARDAR EL RAMO
+========================================= -->
+
+<div id="modalGuardarRamo" class="modal-guardar-ramo">
+
+    <div class="ventana-guardar-ramo">
+
+        <button
+            type="button"
+            class="cerrar-modal-ramo"
+            onclick="cerrarModalGuardarRamo()"
+        >
+            ×
+        </button>
+
+        <h2>🌸 Guardar mi ramo</h2>
+
+        <p class="texto-modal-ramo">
+            Ponle un nombre y agrega una foto a tu ramo.
+        </p>
+
+        <!-- FOTO -->
+        <div class="foto-ramo-guardar">
+
+            <div
+                id="vistaFotoRamo"
+                class="vista-foto-ramo"
+            >
+                🌷
+            </div>
+
+            <label
+                for="fotoRamo"
+                class="boton-subir-foto-ramo"
+            >
+                📷 Agregar foto
+            </label>
+
+            <input
+                type="file"
+                id="fotoRamo"
+                accept="image/*"
+                onchange="mostrarFotoRamo(event)"
+            >
+
+        </div>
+
+        <!-- NOMBRE -->
+        <label
+            for="nombreRamo"
+            class="label-nombre-ramo"
+        >
+            Nombre del ramo
+        </label>
+
+        <input
+            type="text"
+            id="nombreRamo"
+            class="input-nombre-ramo"
+            placeholder="Ej. Ramo de cumpleaños"
+            maxlength="50"
+        >
+
+        <!-- TOTAL -->
+        <div class="total-modal-ramo">
+
+            <span>Costo total</span>
+
+            <strong id="totalModalRamo">
+                S/ 0.00
+            </strong>
+
+        </div>
+
+        <!-- GUARDAR -->
+        <button
+            type="button"
+            class="boton-confirmar-ramo"
+            onclick="confirmarGuardarRamo()"
+        >
+            💾 Guardar ramo
+        </button>
+
+    </div>
+
+</div>
+
+    </main>
+
+
+    <nav class="barra-inferior">
+
+        <button onclick="volverInicio()">
+            🏠
+        </button>
+
+        <button onclick="irMateriales()">
+            📦
+        </button>
+
+        <button onclick="irFlores()">
+            🌸
+        </button>
+
+        <button>
+            ⚙️
+        </button>
+
+    </nav>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>

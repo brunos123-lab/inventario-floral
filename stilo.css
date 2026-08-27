@@ -1,0 +1,4071 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background-color: #202629;
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    width: 393px;
+    min-height: 852px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #faf7f0;
+    overflow: hidden;
+}
+
+/* ENCABEZADO */
+
+.header {
+    height: 143px;
+    background-color: #806044;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20);
+}
+
+.header h1 {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* CONTENIDO */
+
+.contenido {
+    padding: 25px 18px;
+}
+
+
+/* BIENVENIDA */
+
+.bienvenida {
+    height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-bienvenida {
+    text-align: center;
+    width: 230px;
+}
+
+.texto-bienvenida h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.texto-bienvenida p {
+    font-size: 17px;
+    line-height: 1.35;
+    color: #272727;
+}
+
+
+/* RAMITAS */
+
+.rama {
+    width: 55px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rama span {
+    font-size: 80px;
+}
+
+.rama-izquierda {
+    transform: rotate(-25deg);
+}
+
+.rama-derecha {
+    transform: rotate(25deg) scaleX(-1);
+}
+
+
+/* TARJETAS */
+
+.tarjeta {
+    width: 100%;
+    height: 113px;
+
+    background-color: #e9ddc7;
+    border: 2px solid #d1b79a;
+    border-radius: 22px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 12px 14px;
+    margin-bottom: 22px;
+
+    cursor: pointer;
+}
+
+
+/* ICONOS */
+
+.icono {
+    width: 82px;
+    min-width: 82px;
+
+    text-align: center;
+    font-size: 55px;
+}
+
+
+/* TEXTO */
+
+.informacion {
+    flex: 1;
+    padding-left: 5px;
+}
+
+.informacion h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 3px;
+    color: #242424;
+}
+
+.informacion p {
+    font-size: 15px;
+    line-height: 1.2;
+    color: #272727;
+}
+
+
+/* FLECHA */
+
+.flecha {
+    width: 50px;
+    height: 40px;
+
+    border: none;
+    border-radius: 150px;
+
+    background-color: #6b5524;
+    color: #e2d5c7;
+
+    font-size: 20px;
+
+    box-shadow: 5px 7px 12px rgba(194, 170, 134, 0.25);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+/* =====================================================
+   INTERFAZ MATERIALES
+   ===================================================== */
+
+   .materiales-app {
+    min-height: 852px;
+    background: #faf7f0;
+    position: relative;
+    padding-bottom: 70px;
+}
+
+
+/* ENCABEZADO */
+
+.materiales-header {
+    height: 70px;
+    background: #806044;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    color: white;
+}
+
+.materiales-header h1 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+/* BOTONES DEL ENCABEZADO */
+
+.boton-regresar,
+.boton-agregar {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 34px;
+    font-weight: normal;
+
+    cursor: pointer;
+}
+
+.boton-agregar {
+    font-size: 35px;
+}
+
+
+/* CONTENIDO */
+
+.materiales-contenido {
+    padding: 20px 18px 90px;
+}
+
+
+/* BUSCADOR */
+
+.buscador {
+    height: 50px;
+
+    background: #fffdf8;
+
+    border: 2px solid #dfd4c3;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    margin-bottom: 16px;
+}
+
+.icono-busqueda {
+    font-size: 30px;
+    color: #493b2c;
+
+    margin-right: 10px;
+}
+
+.buscador input {
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    width: 100%;
+
+    font-size: 15px;
+    color: #333;
+}
+
+.buscador input::placeholder {
+    color: #777;
+}
+
+
+/* BOTÓN AGREGAR */
+
+.boton-agregar-material {
+    width: 100%;
+    height: 52px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #89966b;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-bottom: 16px;
+}
+
+.boton-agregar-material span {
+    font-size: 24px;
+    margin-right: 6px;
+}
+
+
+/* LISTA */
+
+.lista-materiales {
+    width: 100%;
+}
+
+
+/* ESTADO VACÍO */
+
+.sin-materiales {
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: #6f665d;
+}
+
+.icono-vacio {
+    font-size: 60px;
+    margin-bottom: 15px;
+    opacity: 0.55;
+}
+
+.sin-materiales p {
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.sin-materiales span {
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   TARJETA DE MATERIAL
+   LA USAREMOS CUANDO AGREGUEMOS MATERIALES
+   ===================================================== */
+
+.material-card {
+    width: 100%;
+    min-height: 140px;
+
+    background: #fffdf8;
+
+    border: 2px solid #e2d8c8;
+    border-radius: 16px;
+
+    margin-bottom: 12px;
+
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+}
+
+.material-imagen {
+    width: 90px;
+    height: 110px;
+
+    border-radius: 10px;
+
+    background: #f0e7d8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    margin-right: 12px;
+}
+
+.material-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.material-info {
+    flex: 1;
+}
+
+.material-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.material-info p {
+    font-size: 14px;
+    margin: 3px 0;
+}
+
+.material-costo {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.material-editar {
+    background: transpaent;
+    border: none;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   BARRA INFERIOR
+   ===================================================== */
+
+.barra-inferior {
+    position: fixed;
+
+    bottom: 0;
+
+    left: 50%;
+transform: translateX(-50%);
+
+    width: 393px;
+    height: 65px;
+
+    background: #89966b;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    border-radius: 0 0 20px 20px;
+}
+
+.barra-inferior button {
+    width: 50px;
+    height: 50px;
+
+    background: transparent;
+    border: none;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+/* =========================================
+   NUEVO MATERIAL
+========================================= */
+
+.nuevo-material-app {
+    width: 393px;
+    min-height: 852px;
+    margin: 0 auto;
+    background: #f8f4ec;
+    overflow: hidden;
+}
+
+
+/* ENCABEZADO */
+
+.nuevo-material-header {
+    height: 62px;
+    background: #8a674b;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.nuevo-material-header h1 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.nuevo-material-header button {
+    position: absolute;
+    right: 18px;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+    font-size: 34px;
+
+    cursor: pointer;
+}
+
+
+/* CONTENIDO */
+
+.nuevo-material-contenido {
+    padding: 22px 17px;
+}
+
+
+/* IMAGEN */
+
+.imagen-material {
+    height: 105px;
+    border: 2px dashed #cbb9a4;
+    border-radius: 14px;
+
+    background: #faf7f1;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    overflow: hidden;
+}
+
+.imagen-material input {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+#contenedorImagen {
+    text-align: center;
+    color: #8a674b;
+}
+
+#contenedorImagen span {
+    font-size: 28px;
+    display: block;
+}
+
+#contenedorImagen p {
+    margin: 4px 0 0;
+    font-size: 14px;
+}
+
+
+/* PREVISUALIZACIÓN DE IMAGEN */
+
+#contenedorImagen img {
+    width: 100%;
+    height: 105px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* ETIQUETAS */
+
+.nuevo-material-contenido label {
+    display: block;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    color: #292929;
+
+    margin: 12px 0 7px;
+}
+
+
+/* CAMPOS */
+
+.nuevo-material-contenido > input {
+    width: 100%;
+    height: 44px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #ded3c5;
+    border-radius: 10px;
+
+    background: #fcfaf6;
+
+    padding: 0 13px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.nuevo-material-contenido > input:focus {
+    border-color: #8a674b;
+}
+
+
+/* BOTÓN CALCULAR */
+
+.boton-calcular {
+    width: 100%;
+    height: 44px;
+
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #8a674b;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.boton-calcular:active {
+    transform: scale(0.98);
+}
+
+
+/* RESULTADO */
+
+.resultado-costo {
+    min-height: 82px;
+
+    margin-top: 14px;
+    padding: 12px 15px;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    background: #f1e7d5;
+    border: 1px solid #dfcfb8;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resultado-costo div {
+    display: flex;
+    flex-direction: column;
+}
+
+.resultado-costo span {
+    font-size: 15px;
+    color: #526046;
+    font-weight: 600;
+}
+
+.resultado-costo strong {
+    font-size: 27px;
+    color: #526046;
+    margin-top: 3px;
+}
+
+.icono-calculadora {
+    font-size: 28px !important;
+    color: #8a674b !important;
+}
+
+
+/* BOTONES INFERIORES */
+
+.acciones-material {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.boton-cancelar,
+.boton-guardar {
+    flex: 1;
+
+    height: 46px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.boton-cancelar {
+    background: #fffdf9;
+
+    border: 1px solid #b9a58d;
+
+    color: #70563f;
+}
+
+.boton-guardar {
+    background: #87966d;
+
+    border: none;
+
+    color: white;
+}
+
+/* =========================================
+   TARJETAS DE MATERIALES
+========================================= */
+
+.lista-materiales {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+/* TARJETA */
+
+.tarjeta-material {
+
+    min-height: 135px;
+
+    background: #fffdf8;
+
+    border: 1px solid #e2d5c2;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    box-shadow: 0 2px 5px rgba(90, 70, 50, 0.08);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+
+/* EFECTO AL TOCAR */
+
+.tarjeta-material:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* IMAGEN */
+
+.imagen-tarjeta {
+
+    width: 95px;
+    height: 110px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+.imagen-tarjeta img {
+
+    width: 90px;
+    height: 100px;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+
+.imagen-sin-foto {
+
+    font-size: 48px;
+
+}
+
+
+/* INFORMACIÓN */
+
+.datos-material {
+
+    flex: 1;
+
+    padding-left: 8px;
+
+    padding-right: 30px;
+}
+
+
+.datos-material h3 {
+
+    margin: 0 0 5px;
+
+    font-size: 18px;
+
+    color: #242424;
+
+}
+
+
+.datos-material p {
+
+    margin: 3px 0;
+
+    font-size: 14px;
+
+    color: #333;
+}
+
+
+/* COSTO */
+
+.costo-tarjeta {
+
+    margin-top: 8px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.costo-tarjeta span {
+
+    font-size: 14px;
+
+    color: #333;
+
+}
+
+
+.costo-tarjeta strong {
+
+    font-size: 20px;
+
+    color: #1f1f1f;
+
+}
+
+
+/* BOTÓN EDITAR */
+
+.editar-material {
+
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #704b2d;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}
+
+
+/* MENSAJE VACÍO */
+
+.sin-materiales {
+
+    min-height: 350px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.icono-vacio {
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+}
+
+
+.sin-materiales p {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #70563f;
+
+    margin: 5px 0;
+}
+
+
+.sin-materiales span {
+
+    color: #806d5b;
+
+    font-size: 15px;
+}
+
+/* ============================= */
+/* TARJETA DE MATERIAL */
+/* ============================= */
+
+.material-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 130px;
+
+    box-sizing: border-box;
+
+    background: #fffdf8;
+
+    border: 2px solid #eadfce;
+    border-radius: 18px;
+
+    padding: 12px 45px 12px 12px;
+
+    margin-bottom: 12px;
+
+    box-shadow: 0 2px 6px rgba(90, 70, 45, 0.08);
+}
+
+
+/* ============================= */
+/* IMAGEN */
+/* ============================= */
+
+.material-imagen {
+    width: 95px;
+    height: 95px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+}
+
+.material-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.imagen-vacia {
+    font-size: 45px;
+}
+
+
+/* ============================= */
+/* INFORMACIÓN */
+/* ============================= */
+
+.material-info {
+    margin-left: 15px;
+}
+
+.material-info h3 {
+    margin: 0 0 6px 0;
+
+    font-size: 19px;
+
+    color: #242424;
+}
+
+.material-info p {
+    margin: 3px 0;
+
+    font-size: 14px;
+
+    color: #444;
+}
+
+.material-info strong {
+    display: block;
+
+    margin-top: 7px;
+
+    font-size: 14px;
+
+    color: #333;
+}
+
+.costo-unitario {
+    font-size: 19px;
+
+    font-weight: bold;
+
+    margin-top: 2px;
+
+    color: #171717;
+}
+
+
+/* ============================= */
+/* TACHITO */
+/* ============================= */
+
+.eliminar-material {
+
+    position: absolute;
+
+    right: 10px;
+    bottom: 10px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    transition: 0.2s;
+}
+
+.eliminar-material:hover {
+
+    background: #f3e5dc;
+
+    transform: scale(1.1);
+}
+
+.eliminar-material:active {
+
+    transform: scale(0.9);
+}
+
+/* =====================================
+   VENTANA NUEVA FLOR
+===================================== */
+
+.modal-nueva-flor {
+    display: none;
+
+    position: fixed;
+
+    width: 393px;
+    height: 852px;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 1000;
+
+    background: #faf7ef;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+.formulario-nueva-flor {
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+
+    background: #faf7ef;
+
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+/* CABECERA */
+
+.cabecera-nueva-flor {
+    height: 65px;
+
+    background: #8a6040;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    border-radius: 18px 18px 0 0;
+}
+
+.cabecera-nueva-flor h2 {
+    margin: 0;
+
+    font-size: 20px;
+}
+
+.cerrar-flor {
+    position: absolute;
+
+    right: 15px;
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 34px;
+
+    cursor: pointer;
+}
+
+
+/* FOTO */
+
+.foto-nueva-flor {
+    margin: 18px;
+
+    height: 105px;
+
+    border: 2px dashed #d8cec0;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    color: #514941;
+
+    background: #fffdf8;
+
+    cursor: pointer;
+
+    text-align: center;
+}
+
+.mas-foto {
+    font-size: 34px;
+}
+
+.foto-nueva-flor small {
+    font-size: 12px;
+}
+
+
+/* CAMPOS */
+
+.campo-flor {
+    margin: 0 18px 15px;
+}
+
+.campo-flor > label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #39342f;
+}
+
+.campo-flor > input {
+    width: 100%;
+
+    height: 43px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #ddd3c5;
+
+    border-radius: 10px;
+
+    background: #fffdf8;
+
+    padding: 0 12px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+/* LISTA DE MATERIALES */
+
+.lista-materiales-flor {
+    border: 1px solid #ddd3c5;
+
+    border-radius: 10px;
+
+    background: #fffdf8;
+
+    overflow: hidden;
+}
+
+.material-opcion-flor {
+    display: flex;
+
+    align-items: center;
+
+    padding: 10px;
+
+    border-bottom: 1px solid #eee6db;
+
+    gap: 8px;
+}
+
+.material-opcion-flor:last-child {
+    border-bottom: none;
+}
+
+.nombre-material-flor {
+    flex: 1;
+
+    font-size: 13px;
+
+    color: #39342f;
+}
+
+.cantidad-flor {
+    width: 45px;
+
+    height: 30px;
+
+    text-align: center;
+
+    border: 1px solid #d8cec0;
+
+    border-radius: 7px;
+
+    outline: none;
+}
+
+.precio-flor {
+    width: 58px;
+
+    text-align: right;
+
+    font-size: 13px;
+
+    color: #39342f;
+}
+
+
+/* CALCULAR */
+
+.calcular-flor {
+    width: calc(100% - 36px);
+
+    margin: 0 18px 12px;
+
+    height: 43px;
+
+    border: 1px solid #8a6040;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #6f4f35;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.calcular-flor:active {
+    transform: scale(0.98);
+}
+
+
+/* RESULTADO */
+
+.resultado-flor {
+    margin: 0 18px 14px;
+
+    padding: 12px;
+
+    background: #f4ead8;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.resultado-flor span {
+    display: block;
+
+    font-size: 14px;
+
+    color: #5b5149;
+
+    margin-bottom: 3px;
+}
+
+.resultado-flor strong {
+    display: block;
+
+    font-size: 28px;
+
+    color: #61723e;
+}
+
+
+/* GUARDAR */
+
+.guardar-flor {
+    width: calc(100% - 36px);
+
+    margin: 0 18px 18px;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #7f8e57;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.guardar-flor:active {
+    transform: scale(0.98);
+}
+
+/* =====================================
+   TARJETAS DE FLORES
+   ===================================== */
+
+.tarjeta-flor {
+    width: 100%;
+    min-height: 125px;
+
+    background: #fffdf8;
+    border: 2px solid #eadfce;
+    border-radius: 18px;
+
+    padding: 10px 45px 10px 10px;
+    margin-bottom: 12px;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+    position: relative;
+
+    box-shadow: 0 2px 6px rgba(90, 70, 45, 0.08);
+}
+
+
+/* FOTO */
+
+.imagen-flor-tarjeta {
+    width: 95px;
+    height: 95px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    border-radius: 14px;
+
+    background: #f0e7d8;
+}
+
+.imagen-flor-tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.flor-sin-foto {
+    font-size: 45px;
+}
+
+
+/* INFORMACIÓN */
+
+.datos-flor {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.datos-flor h3 {
+    margin: 0 0 8px;
+
+    font-size: 19px;
+    color: #242424;
+}
+
+.datos-flor p {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #61723e;
+}
+
+
+/* TACHITO */
+
+.eliminar-flor {
+    position: absolute;
+
+    right: 10px;
+    bottom: 10px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    background: transparent;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+}
+
+.eliminar-flor:hover {
+    background: #f3e5dc;
+    transform: scale(1.1);
+}
+
+.eliminar-flor:active {
+    transform: scale(0.9);
+}
+
+/* =====================================
+   TOTAL DEL COTIZADOR
+   ===================================== */
+
+.total-cotizador {
+
+    margin-top: 18px;
+    margin-bottom: 20px;
+
+    padding: 15px;
+
+    background: #f1e7d5;
+
+    border: 1px solid #dfcfb8;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.total-cotizador span {
+
+    font-size: 15px;
+
+    color: #5b5149;
+}
+
+.total-cotizador strong {
+
+    font-size: 23px;
+
+    color: #61723e;
+}
+
+.subtotal-item {
+
+    font-size: 13px !important;
+
+    color: #806044 !important;
+
+    font-weight: 600;
+}
+
+/* =========================================
+   COTIZADOR - DISEÑO COMPLETO
+   ========================================= */
+
+.cotizador-app {
+    width: 100%;
+    max-width: 393px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: #faf7f0;
+    box-sizing: border-box;
+}
+
+
+/* ENCABEZADO */
+
+.cotizador-header {
+    height: 68px;
+    background: #8a6445;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 16px;
+    box-sizing: border-box;
+
+    color: white;
+}
+
+.cotizador-header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.cotizador-header button {
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+    font-size: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.cotizador-header .boton-regresar {
+    font-size: 28px;
+}
+
+.cerrar-cotizador {
+    font-size: 30px !important;
+}
+
+
+/* CONTENIDO */
+
+.cotizador-contenido {
+    padding: 18px 16px 25px;
+    box-sizing: border-box;
+}
+
+.cotizador-contenido h2 {
+    margin: 0 0 12px;
+
+    font-size: 18px;
+    line-height: 1.3;
+
+    color: #292929;
+}
+
+
+/* FLOR / MATERIAL */
+
+.selector-tipo {
+    width: 100%;
+
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.selector-tipo button {
+    flex: 1;
+
+    height: 52px;
+
+    border: 2px solid #e3d5bd;
+    border-radius: 12px;
+
+    background: #fffdf8;
+
+    color: #292929;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.selector-tipo .tipo-seleccionado {
+    background: #f0e1c7;
+    border-color: #b9976b;
+    font-weight: 700;
+}
+
+
+/* LISTA */
+
+.lista-cotizador {
+    width: 100%;
+}
+
+
+/* TARJETA */
+
+.item-cotizador {
+    width: 100%;
+    min-height: 88px;
+
+    margin-bottom: 10px;
+    padding: 9px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    background: #fffdf9;
+
+    border: 1px solid #e3d9c9;
+    border-radius: 14px;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+
+/* IMAGEN */
+
+.imagen-item-cotizador {
+    width: 68px !important;
+    height: 68px !important;
+
+    min-width: 68px;
+    max-width: 68px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #f1e8d9;
+}
+
+.imagen-item-cotizador img {
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    display: block;
+}
+
+
+/* INFORMACIÓN */
+
+.info-item-cotizador {
+    min-width: 0;
+
+    margin-left: 12px;
+
+    padding-right: 45px;
+}
+
+.info-item-cotizador h3 {
+    margin: 0 0 4px;
+
+    font-size: 17px;
+    line-height: 1.2;
+
+    color: #222;
+}
+
+.info-item-cotizador p {
+    margin: 3px 0;
+
+    font-size: 14px;
+    line-height: 1.2;
+
+    color: #333;
+}
+
+.cantidad-item {
+    color: #657640 !important;
+    font-weight: 600;
+}
+
+.subtotal-item {
+    color: #806044 !important;
+    font-size: 13px !important;
+    font-weight: 600;
+}
+
+
+/* BOTÓN + */
+
+.boton-sumar-cotizador {
+    position: absolute;
+
+    right: 10px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 38px !important;
+    height: 38px !important;
+
+    min-width: 38px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #71834a;
+
+    color: white;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+
+/* TOTAL */
+
+.total-cotizador {
+    width: 100%;
+
+    margin-top: 16px;
+    margin-bottom: 20px;
+
+    padding: 14px;
+
+    box-sizing: border-box;
+
+    background: #f1e5d1;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-cotizador span {
+    font-size: 14px;
+    color: #5b5149;
+}
+
+.total-cotizador strong {
+    font-size: 21px;
+    color: #657640;
+}
+
+
+/* BOTONES FINALES */
+
+.acciones-cotizador {
+    width: 100%;
+
+    display: flex;
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.acciones-cotizador button {
+    flex: 1;
+
+    height: 48px;
+
+    border-radius: 11px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.boton-cancelar-cotizador {
+    background: #fffdf8;
+
+    border: 2px solid #9b7654;
+
+    color: #76583f;
+}
+
+.boton-guardar-cotizador {
+    background: #84975d;
+
+    border: 2px solid #84975d;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* MENSAJE SIN ELEMENTOS */
+
+.cotizador-contenido .sin-materiales {
+    padding: 30px 10px;
+    text-align: center;
+}
+
+
+/* =================================
+   DISEÑO DEL ENCABEZADO
+================================= */
+
+.titulo-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.titulo-principal h1 {
+    margin: 0;
+}
+
+.adorno-floral {
+    font-size: 22px;
+    color: #899b5f;
+}
+
+
+/* =================================
+   FRASE FINAL
+================================= */
+
+.frase-final {
+    text-align: center;
+    margin: 35px 20px 25px;
+    padding: 18px 10px;
+}
+
+.frase-final p {
+    margin: 8px 0;
+    font-size: 16px;
+    font-style: italic;
+    color: #806143;
+    letter-spacing: 0.3px;
+}
+
+.frase-final span {
+    color: #899b5f;
+    font-size: 18px;
+}
+
+/* =========================================
+   ESTILO ELEGANTE DE LA BIENVENIDA
+========================================= */
+
+.bienvenida {
+    text-align: center;
+    margin: 45px auto 38px;
+    padding: 0 20px;
+}
+
+/* Título */
+
+.bienvenida h2 {
+    margin: 0;
+
+    font-family:
+        "Baskerville",
+        "Georgia",
+        "Times New Roman",
+        serif;
+
+    font-size: 32px;
+    font-weight: 600;
+
+    color: #3f332b;
+
+    letter-spacing: 0.3px;
+}
+
+/* Corazón */
+
+.corazon-bienvenida {
+    margin: 10px 0 13px;
+
+    color: #8b6b4a;
+
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+/* Texto */
+
+.bienvenida p {
+    margin: 0;
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    font-size: 18px;
+    line-height: 1.55;
+
+    color: #403833;
+
+    font-weight: 400;
+}
+
+/* =========================================
+   CORRECCIÓN - BIENVENIDA
+========================================= */
+
+.bienvenida {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    margin: 55px auto 45px;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Título */
+
+.bienvenida h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 600;
+
+    color: #332820;
+
+    line-height: 1.1;
+}
+
+/* Corazón */
+
+.corazon-bienvenida {
+    margin: 10px 0 12px;
+
+    color: #9a7557;
+    font-size: 17px;
+
+    line-height: 1;
+}
+
+/* Texto */
+
+.bienvenida p {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.45;
+
+    color: #3d342f;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   OLIVOS
+========================================= */
+
+.bienvenida .olivo {
+    position: absolute;
+
+    width: 72px;
+    height: 115px;
+
+    object-fit: contain;
+
+    opacity: 0.9;
+}
+
+/* Olivo izquierdo */
+
+.bienvenida .olivo:first-of-type {
+    left: 8px;
+    top: 35px;
+}
+
+/* Olivo derecho */
+
+.bienvenida .olivo:last-of-type {
+    right: 8px;
+    top: 35px;
+}
+
+
+/* =========================================
+   ESPACIO PARA LAS TARJETAS
+========================================= */
+
+.bienvenida + .tarjetas,
+.bienvenida + .opciones-inicio {
+    margin-top: 10px;
+}
+
+/* =========================================
+   CORRECCIÓN FINAL DE BIENVENIDA
+========================================= */
+
+.bienvenida {
+    position: relative !important;
+
+    width: 100% !important;
+    max-width: 500px !important;
+
+    height: 260px !important;
+    min-height: 0 !important;
+
+    margin: 35px auto 25px !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* CONTENIDO CENTRAL */
+
+.texto-bienvenida {
+    position: relative !important;
+    z-index: 3 !important;
+
+    width: 280px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: center !important;
+}
+
+
+/* TÍTULO */
+
+.texto-bienvenida h2 {
+    margin: 0 !important;
+
+    font-family: Georgia, "Times New Roman", serif !important;
+
+    font-size: 34px !important;
+    line-height: 1.1 !important;
+
+    color: #3d2c22 !important;
+}
+
+
+/* CORAZÓN */
+
+.corazon-bienvenida {
+    margin: 8px 0 12px !important;
+
+    font-size: 17px !important;
+
+    color: #9a7557 !important;
+
+    line-height: 1 !important;
+}
+
+
+/* TEXTO */
+
+.texto-bienvenida p {
+    margin: 0 !important;
+
+    font-family: Arial, sans-serif !important;
+
+    font-size: 18px !important;
+    line-height: 1.45 !important;
+
+    color: #403832 !important;
+
+    text-align: center !important;
+}
+
+
+/* =========================================
+   OLIVO IZQUIERDO
+========================================= */
+
+.rama {
+    position: absolute !important;
+
+    top: 50% !important;
+
+    width: 75px !important;
+    height: 120px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: translateY(-50%) !important;
+
+    z-index: 2 !important;
+}
+
+
+/* IZQUIERDA */
+
+.rama-izquierda {
+    left: 12px !important;
+}
+
+
+/* DERECHA */
+
+.rama-derecha {
+    right: 12px !important;
+}
+
+
+/* IMAGEN / ELEMENTO DEL OLIVO */
+
+.rama span {
+    display: block !important;
+
+    font-size: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+/* =========================================
+   OLIVOS TEMPORALES
+========================================= */
+
+.rama span::before {
+    content: "🌿";
+
+    display: block;
+
+    font-size: 70px;
+
+    line-height: 1;
+
+    opacity: 0.9;
+}
+
+.rama-derecha span::before {
+    transform: scaleX(-1);
+}
+
+
+/* =========================================
+   EVITAR QUE LA BIENVENIDA EMPUJE
+   LAS TARJETAS HACIA ABAJO
+========================================= */
+
+.contenido {
+    overflow-x: hidden;
+}
+
+.bienvenida + * {
+    margin-top: 0 !important;
+}
+
+/* =========================================
+   BIENVENIDA
+========================================= */
+
+.bienvenida {
+    position: relative;
+
+    width: 100%;
+    max-width: 500px;
+
+    height: 220px;
+
+    margin: 10px auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CONTENIDO CENTRAL
+========================================= */
+
+.contenido-bienvenida {
+    width: 285px;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.contenido-bienvenida h2 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 35px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    color: #3d2c22;
+}
+
+
+/* =========================================
+   CORAZÓN DECORATIVO
+========================================= */
+
+.corazon-bienvenida {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    margin: 12px 0 14px;
+
+    color: #8a674b;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+}
+
+.corazon-bienvenida span {
+    width: 34px;
+    height: 1px;
+
+    background: #c9ad8c;
+
+    display: block;
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.contenido-bienvenida p {
+    margin: 0;
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    color: #403832;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   OLIVOS
+========================================= */
+
+.rama {
+    position: absolute;
+
+    width: 90px;
+    height: 150px;
+
+    object-fit: contain;
+
+    z-index: 1;
+
+    opacity: 0.9;
+
+    pointer-events: none;
+}
+
+
+/* OLIVO IZQUIERDO */
+
+.rama-izquierda {
+    left: 8px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* OLIVO DERECHO */
+
+.rama-derecha {
+    right: 8px;
+
+    top: 50%;
+
+    transform: translateY(-50%) scaleX(-1);
+}
+
+.imagen-ilustracion {
+    width: 82px;
+    height: 82px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ===== AJUSTE FINAL DE BIENVENIDA ===== */
+
+.contenido {
+    padding-top: 5px !important;
+}
+
+.bienvenida {
+    height: 200px !important;
+    margin: 0 auto 10px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.texto-bienvenida {
+    width: 280px !important;
+}
+
+.texto-bienvenida h2 {
+    margin: 0 !important;
+    font-size: 32px !important;
+}
+
+.corazon-bienvenida {
+    margin: 6px 0 10px !important;
+}
+
+.texto-bienvenida p {
+    margin: 0 !important;
+    font-size: 17px !important;
+    line-height: 1.4 !important;
+}
+
+.rama {
+    width: 65px !important;
+    height: 105px !important;
+}
+
+.rama-izquierda {
+    left: 18px !important;
+}
+
+.rama-derecha {
+    right: 18px !important;
+}
+
+/* Título principal: misma letra que Bienvenida */
+.cotizador-header h1,
+header h1 {
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 25px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px !important;
+}
+
+/* BOTÓN SELECCIONADO */
+.selector-tipo button.tipo-seleccionado {
+    background-color: #8a6748 !important;
+    color: #ffffff !important;
+    border-color: #8a6748 !important;
+}
+
+/* Botón que NO está seleccionado */
+.selector-tipo button {
+    transition: all 0.25s ease;
+}
+
+/* MANO DE OBRA */
+
+.mano-obra-ramo {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 18px;
+
+    background: #fffdf8;
+    border-radius: 18px;
+
+    box-shadow: 0 3px 10px rgba(90, 70, 45, 0.08);
+}
+
+.mano-obra-ramo h2 {
+    margin: 0 0 18px;
+    font-size: 21px;
+    color: #172d43;
+}
+
+/* TIEMPO + COSTO */
+
+.mano-obra-contenido {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 14px;
+    align-items: start;
+}
+
+/* TIEMPO */
+
+.mano-obra-contenido > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 8px;
+}
+
+.mano-obra-contenido > div:first-child span {
+    font-size: 14px;
+    color: #6b625b;
+}
+
+.mano-obra-contenido > div:first-child strong {
+    font-size: 25px;
+    color: #263746;
+}
+
+/* COLUMNA COSTO */
+
+.mano-obra-contenido > div:last-child {
+    width: 100%;
+    height: auto;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+}
+
+/* TEXTO COSTO */
+
+.mano-obra-contenido > div:last-child > span:first-child {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #5b5149;
+}
+
+/* CAMPO S/ + PRECIO */
+
+.campo-mano-obra {
+    width: 100%;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    padding: 0 10px;
+
+    background: #f3faf2;
+
+    border: 2px solid #c8dcb9;
+    border-radius: 13px;
+}
+
+.campo-mano-obra > span {
+    flex-shrink: 0;
+
+    margin-right: 5px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #61723e;
+}
+
+.campo-mano-obra input {
+    width: 100%;
+    height: 100%;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    outline: none;
+
+    background: transparent !important;
+
+    font-size: 20px !important;
+    color: #263746;
+}
+
+/* BOTÓN COTIZAR */
+
+.mano-obra-ramo .boton-cotizar {
+    width: 145px;
+    height: 45px;
+
+    margin: 10px 0 0 auto;
+
+    border-radius: 14px;
+
+    background: #7f8e57;
+
+    font-size: 17px;
+
+    box-shadow: 0 4px 9px rgba(127, 142, 87, 0.20);
+}
+
+
+
+.resumen-ramo h2 {
+    margin: 0 0 15px;
+
+    font-size: 18px;
+    color: #172d43;
+}
+
+.fila-resumen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 9px 0;
+
+    font-size: 14px;
+}
+
+.fila-resumen strong {
+    color: #263746;
+}
+
+.resumen-ramo hr {
+    margin: 13px 0;
+}
+
+.total-final {
+    font-size: 16px;
+}
+
+/* GUARDAR */
+
+.guardar-cotizacion-final {
+    width: 100%;
+    height: 48px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #7f8e57;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* BARRA INFERIOR */
+
+.nuevo-ramo-app .barra-inferior {
+    width: 393px;
+    max-width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-radius: 18px 18px 0 0;
+}
+
+/* =========================================================
+   NUEVO RAMO — AJUSTE FINAL DE ESTRUCTURA
+   ========================================================= */
+
+/* Contenedor general */
+.nuevo-ramo-app {
+    width: 100%;
+    max-width: 393px;
+    min-height: 100vh;
+    margin: 0 auto;
+    overflow-x: hidden;
+    background: #faf7f0;
+    box-sizing: border-box;
+}
+
+/* Contenido */
+.nuevo-ramo-contenido {
+    width: 100%;
+    max-width: 393px;
+    margin: 0 auto;
+
+    padding: 16px;
+    padding-bottom: 90px;
+
+    box-sizing: border-box;
+}
+
+
+
+/* =========================================================
+   BARRA INFERIOR
+   ========================================================= */
+
+.nuevo-ramo-app .barra-inferior {
+    position: fixed !important;
+
+    left: 50% !important;
+    bottom: 0 !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 100% !important;
+    max-width: 393px !important;
+
+    height: 64px !important;
+
+    box-sizing: border-box;
+
+    margin: 0 !important;
+
+    display: flex !important;
+
+    align-items: center;
+    justify-content: space-around;
+
+    background: #89966b;
+
+    border-radius: 18px 18px 0 0;
+
+    z-index: 1000;
+}
+
+.nuevo-ramo-app .barra-inferior button {
+    width: 50px !important;
+    height: 50px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+
+    background: transparent !important;
+
+    font-size: 24px;
+}
+
+/* =========================================
+   CORRECCIÓN FINAL — NUEVO RAMO
+   RESUMEN DENTRO DEL TELÉFONO
+========================================= */
+
+.nuevo-ramo-app {
+    position: relative !important;
+    width: 393px !important;
+    max-width: 393px !important;
+    min-height: 100vh !important;
+    margin: 0 auto !important;
+    overflow-x: hidden !important;
+    background: #faf7f0 !important;
+}
+
+
+/* CONTENIDO */
+
+.nuevo-ramo-contenido {
+    width: 100% !important;
+    max-width: 393px !important;
+    margin: 0 auto !important;
+
+    padding: 16px !important;
+    padding-bottom: 90px !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* RESUMEN */
+
+.nuevo-ramo-contenido .resumen-ramo {
+    position: static !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 18px 0 !important;
+
+    padding: 18px !important;
+
+    box-sizing: border-box !important;
+
+    background: #fffdf8 !important;
+
+    border-radius: 18px !important;
+
+    box-shadow: 0 4px 12px rgba(90, 70, 45, 0.08) !important;
+}
+
+
+/* FILAS DEL RESUMEN */
+
+.nuevo-ramo-contenido .fila-resumen {
+    width: 100% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    margin: 9px 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* BOTÓN GUARDAR */
+
+.nuevo-ramo-contenido .guardar-cotizacion-final {
+    position: static !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: 48px !important;
+
+    margin: 0 0 20px 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* BARRA INFERIOR */
+
+.nuevo-ramo-app .barra-inferior {
+    position: fixed !important;
+
+    left: 50% !important;
+    bottom: 0 !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 393px !important;
+    max-width: 393px !important;
+
+    height: 64px !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+
+    z-index: 1000 !important;
+
+    background: #89966b !important;
+
+    border-radius: 18px 18px 0 0 !important;
+}
+
+/* =========================================================
+   NUEVO RAMO — DISEÑO FINAL
+   SOLO AFECTA A .nuevo-ramo-app
+   ========================================================= */
+
+.nuevo-ramo-app {
+    width: 393px !important;
+    max-width: 393px !important;
+    min-height: 100vh !important;
+    height: auto !important;
+
+    margin: 0 auto !important;
+
+    background: #faf7f0 !important;
+
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.nuevo-ramo-app .nuevo-ramo-header {
+    width: 100% !important;
+    height: 92px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    padding: 0 18px !important;
+    box-sizing: border-box !important;
+
+    background: #8a6748 !important;
+    color: white !important;
+}
+
+.nuevo-ramo-app .nuevo-ramo-header h1 {
+    margin: 0 !important;
+
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+
+    color: white !important;
+}
+
+.nuevo-ramo-app .boton-regresar,
+.nuevo-ramo-app .boton-eliminar-ramo {
+    width: 40px !important;
+    height: 40px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: none !important;
+    background: transparent !important;
+
+    color: white !important;
+    font-size: 28px !important;
+
+    cursor: pointer !important;
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.nuevo-ramo-app .nuevo-ramo-contenido {
+    width: 100% !important;
+    max-width: 393px !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    padding: 22px 22px 95px !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+
+    display: block !important;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.nuevo-ramo-app .seccion-ramo {
+    width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 0 24px 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+.nuevo-ramo-app .seccion-ramo h2 {
+    margin: 0 0 14px 0 !important;
+
+    font-size: 22px !important;
+    font-weight: 700 !important;
+
+    color: #172d43 !important;
+}
+
+
+/* =========================================================
+   LISTA DE PRODUCTOS
+   ========================================================= */
+
+.nuevo-ramo-app .lista-ramo {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 12px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* =========================================================
+   TARJETAS DE FLORES Y MATERIALES
+   ========================================================= */
+
+.nuevo-ramo-app .tarjeta-producto-ramo {
+    width: 100% !important;
+
+    min-height: 82px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    padding: 12px !important;
+
+    box-sizing: border-box !important;
+
+    background: #fffdf8 !important;
+
+    border: 1px solid #eadbc7 !important;
+    border-radius: 16px !important;
+
+    box-shadow: 0 3px 10px rgba(90, 70, 45, 0.08) !important;
+}
+
+
+/* IMAGEN */
+
+.nuevo-ramo-app .imagen-producto-ramo {
+    width: 62px !important;
+    height: 62px !important;
+
+    min-width: 62px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+
+    border-radius: 12px !important;
+
+    background: #f1e7d8 !important;
+}
+
+.nuevo-ramo-app .imagen-producto-ramo img {
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+}
+
+
+/* DATOS */
+
+.nuevo-ramo-app .datos-producto-ramo {
+    flex: 1 !important;
+
+    min-width: 0 !important;
+}
+
+.nuevo-ramo-app .datos-producto-ramo h3 {
+    margin: 0 0 4px 0 !important;
+
+    font-size: 17px !important;
+    font-weight: 700 !important;
+
+    color: #172d43 !important;
+}
+
+.nuevo-ramo-app .datos-producto-ramo p {
+    margin: 2px 0 !important;
+
+    font-size: 13px !important;
+
+    color: #403832 !important;
+}
+
+.nuevo-ramo-app .subtotal-producto-ramo {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+
+    color: #263746 !important;
+}
+
+
+/* CONTROLES */
+
+.nuevo-ramo-app .controles-producto-ramo {
+    display: flex !important;
+    gap: 5px !important;
+}
+
+.nuevo-ramo-app .controles-producto-ramo button {
+    width: 28px !important;
+    height: 28px !important;
+
+    padding: 0 !important;
+
+    border: none !important;
+    border-radius: 8px !important;
+
+    background: #89966b !important;
+    color: white !important;
+
+    cursor: pointer !important;
+}
+
+
+/* =========================================================
+   MANO DE OBRA
+   ========================================================= */
+
+.nuevo-ramo-app .mano-obra-ramo {
+    width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 0 20px 0 !important;
+    padding: 20px !important;
+
+    box-sizing: border-box !important;
+
+    background: #fffdf8 !important;
+
+    border-radius: 18px !important;
+
+    box-shadow: 0 3px 10px rgba(90, 70, 45, 0.08) !important;
+}
+
+.nuevo-ramo-app .mano-obra-ramo h2 {
+    margin: 0 0 18px 0 !important;
+
+    font-size: 22px !important;
+
+    color: #172d43 !important;
+}
+
+
+/* TIEMPO + COSTO */
+
+.nuevo-ramo-app .mano-obra-contenido {
+    width: 100% !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr 1.15fr !important;
+
+    gap: 14px !important;
+
+    align-items: start !important;
+}
+
+.nuevo-ramo-app .mano-obra-contenido > div:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+
+    gap: 5px !important;
+
+    padding-top: 8px !important;
+}
+
+.nuevo-ramo-app .mano-obra-contenido > div:first-child span {
+    font-size: 14px !important;
+    color: #6b625b !important;
+}
+
+.nuevo-ramo-app .mano-obra-contenido > div:first-child strong {
+    font-size: 25px !important;
+    color: #263746 !important;
+}
+
+
+/* COSTO */
+
+.nuevo-ramo-app .mano-obra-contenido > div:last-child {
+    width: 100% !important;
+
+    padding: 0 !important;
+
+    background: transparent !important;
+    border: none !important;
+}
+
+.nuevo-ramo-app .mano-obra-contenido > div:last-child > span:first-child {
+    display: block !important;
+
+    margin-bottom: 6px !important;
+
+    font-size: 14px !important;
+    font-weight: 600 !important;
+
+    color: #5b5149 !important;
+}
+
+
+/* CAMPO PRECIO */
+
+.nuevo-ramo-app .campo-mano-obra {
+    width: 100% !important;
+    height: 48px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    padding: 0 10px !important;
+
+    box-sizing: border-box !important;
+
+    background: #f3faf2 !important;
+
+    border: 2px solid #c8dcb9 !important;
+    border-radius: 13px !important;
+}
+
+.nuevo-ramo-app .campo-mano-obra > span {
+    flex-shrink: 0 !important;
+
+    margin-right: 5px !important;
+
+    font-size: 18px !important;
+    font-weight: 700 !important;
+
+    color: #61723e !important;
+}
+
+.nuevo-ramo-app .campo-mano-obra input {
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    outline: none !important;
+
+    background: transparent !important;
+
+    font-size: 20px !important;
+}
+
+
+/* BOTÓN COTIZAR */
+
+.nuevo-ramo-app .mano-obra-ramo .boton-cotizar {
+    width: 145px !important;
+    height: 45px !important;
+
+    margin: 10px 0 0 auto !important;
+
+    border: none !important;
+    border-radius: 14px !important;
+
+    background: #89966b !important;
+    color: white !important;
+
+    font-size: 17px !important;
+    font-weight: 700 !important;
+
+    box-shadow: 0 4px 9px rgba(127, 142, 87, 0.20) !important;
+}
+
+
+/* =========================================================
+   RESUMEN
+   ========================================================= */
+
+.nuevo-ramo-app .contenedor-resumen {
+    position: static !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 0 18px 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+.nuevo-ramo-app .resumen-ramo {
+    position: static !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 18px !important;
+
+    box-sizing: border-box !important;
+
+    background: #fffdf8 !important;
+
+    border-radius: 18px !important;
+
+    box-shadow: 0 3px 10px rgba(90, 70, 45, 0.08) !important;
+}
+
+.nuevo-ramo-app .resumen-ramo h2 {
+    margin: 0 0 15px 0 !important;
+
+    font-size: 18px !important;
+    color: #172d43 !important;
+}
+
+.nuevo-ramo-app .fila-resumen {
+    width: 100% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    margin: 9px 0 !important;
+
+    font-size: 14px !important;
+}
+
+.nuevo-ramo-app .fila-resumen strong {
+    color: #263746 !important;
+}
+
+.nuevo-ramo-app .resumen-ramo hr {
+    margin: 13px 0 !important;
+}
+
+.nuevo-ramo-app .total-final {
+    font-size: 16px !important;
+}
+
+
+/* =========================================================
+   GUARDAR COTIZACIÓN
+   ========================================================= */
+
+.nuevo-ramo-app .guardar-cotizacion-final {
+    display: block !important;
+
+    width: 220px !important;
+    max-width: 220px !important;
+
+    height: 48px !important;
+
+    margin: 0 auto 20px auto !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+
+    border: none !important;
+    border-radius: 14px !important;
+
+    background: #89966b !important;
+    color: white !important;
+
+    font-size: 16px !important;
+    font-weight: 700 !important;
+
+    cursor: pointer !important;
+
+    box-shadow: 0 4px 10px rgba(90, 110, 70, 0.18) !important;
+}
+
+
+/* =========================================================
+   BARRA INFERIOR
+   ========================================================= */
+
+.nuevo-ramo-app .barra-inferior {
+    position: fixed !important;
+
+    left: 50% !important;
+    bottom: 0 !important;
+
+    transform: translateX(-50%) !important;
+
+    width: 393px !important;
+    max-width: 393px !important;
+
+    height: 76px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+
+    background: #89966b !important;
+
+    border-radius: 18px 18px 0 0 !important;
+
+    z-index: 1000 !important;
+}
+
+.nuevo-ramo-app .barra-inferior button {
+    width: 50px !important;
+    height: 50px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+
+    background: transparent !important;
+
+    font-size: 25px !important;
+}
+
+/* =========================================
+   MODAL — GUARDAR RAMO
+========================================= */
+
+.modal-guardar-ramo {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    background: rgba(40, 35, 30, 0.45);
+}
+
+
+/* VENTANA */
+
+.ventana-guardar-ramo {
+    position: relative;
+
+    width: 100%;
+    max-width: 340px;
+
+    box-sizing: border-box;
+
+    padding: 25px 22px;
+
+    background: #fffdf8;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 12px 35px rgba(60, 45, 30, 0.20);
+}
+
+
+/* CERRAR */
+
+.cerrar-modal-ramo {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 32px;
+    height: 32px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #806143;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* TÍTULO */
+
+.ventana-guardar-ramo h2 {
+    margin: 0 0 8px;
+
+    text-align: center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 25px;
+
+    color: #172d43;
+}
+
+
+/* TEXTO */
+
+.texto-modal-ramo {
+    margin: 0 0 20px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    color: #6b625b;
+}
+
+
+/* FOTO */
+
+.foto-ramo-guardar {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+/* VISTA PREVIA */
+
+.vista-foto-ramo {
+    width: 125px;
+    height: 125px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #f0e6d6;
+
+    border-radius: 18px;
+
+    font-size: 45px;
+
+    color: #89966b;
+}
+
+
+.vista-foto-ramo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* BOTÓN FOTO */
+
+.boton-subir-foto-ramo {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 42px;
+
+    box-sizing: border-box;
+
+    border-radius: 13px;
+
+    background: #89966b;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+#fotoRamo {
+    display: none;
+}
+
+
+/* NOMBRE */
+
+.label-nombre-ramo {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #5b5149;
+}
+
+
+.input-nombre-ramo {
+    width: 100%;
+    height: 48px;
+
+    box-sizing: border-box;
+
+    padding: 0 14px;
+
+    border: 2px solid #dfd2c0;
+
+    border-radius: 13px;
+
+    background: #fff;
+
+    outline: none;
+
+    font-size: 16px;
+
+    color: #332820;
+}
+
+
+.input-nombre-ramo:focus {
+    border-color: #89966b;
+}
+
+
+/* TOTAL */
+
+.total-modal-ramo {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 20px 0;
+
+    padding: 13px 14px;
+
+    background: #f5f1e9;
+
+    border-radius: 13px;
+
+    color: #5b5149;
+
+    font-size: 14px;
+}
+
+
+.total-modal-ramo strong {
+    font-size: 18px;
+
+    color: #172d43;
+}
+
+
+/* BOTÓN GUARDAR */
+
+.boton-confirmar-ramo {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #89966b;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 12px rgba(127, 142, 87, 0.20);
+}
+
+
+.boton-confirmar-ramo:active {
+    transform: scale(0.98);
+}
+
+/* =========================================
+   MIS RAMOS
+========================================= */
+
+.mis-ramos-app {
+    width: 393px;
+    max-width: 100%;
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    background: #faf7f0;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.mis-ramos-header {
+    width: 100%;
+    height: 92px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    background: #806143;
+
+    color: white;
+}
+
+
+.mis-ramos-header h1 {
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.mis-ramos-header .boton-regresar {
+    width: 45px;
+    height: 45px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+.espacio-header {
+    width: 45px;
+    height: 45px;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.mis-ramos-contenido {
+    width: 100%;
+
+    padding: 24px 20px 90px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.titulo-mis-ramos {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 0 0 22px;
+}
+
+
+.titulo-mis-ramos > span {
+    font-size: 30px;
+}
+
+
+.titulo-mis-ramos h2 {
+    margin: 0;
+
+    font-size: 21px;
+
+    color: #172d43;
+}
+
+
+.titulo-mis-ramos p {
+    margin: 4px 0 0;
+
+    font-size: 13px;
+
+    color: #6b625b;
+}
+
+
+/* =========================================
+   LISTA
+========================================= */
+
+.lista-ramos {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   TARJETA DEL RAMO
+========================================= */
+
+.tarjeta-ramo {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px;
+
+    box-sizing: border-box;
+
+    background: #fffdf8;
+
+    border: 1px solid #eadfce;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 4px 12px rgba(90, 70, 45, 0.08);
+}
+
+
+/* =========================================
+   FOTO
+========================================= */
+
+.imagen-ramo {
+    flex-shrink: 0;
+
+    width: 105px;
+    height: 120px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: #f0e6d6;
+}
+
+
+.imagen-ramo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.imagen-ramo-sin-foto {
+    font-size: 42px;
+}
+
+
+/* =========================================
+   INFORMACIÓN
+========================================= */
+
+.datos-ramo {
+    min-width: 0;
+
+    padding-right: 25px;
+}
+
+
+.datos-ramo h3 {
+    margin: 0 0 7px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    color: #172d43;
+
+    word-break: break-word;
+}
+
+
+.datos-ramo p {
+    margin: 4px 0;
+
+    font-size: 14px;
+
+    color: #5b5149;
+}
+
+
+.datos-ramo .costo-ramo {
+    margin-top: 9px;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #7f8e57;
+}
+
+
+/* =========================================
+   ELIMINAR
+========================================= */
+
+.eliminar-ramo {
+    position: absolute;
+
+    right: 12px;
+    bottom: 12px;
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   CUANDO NO HAY RAMOS
+========================================= */
+
+.sin-ramos {
+    padding: 45px 20px;
+
+    text-align: center;
+}
+
+
+.sin-ramos .icono-vacio {
+    margin-bottom: 12px;
+
+    font-size: 50px;
+}
+
+
+.sin-ramos p {
+    margin: 0 0 5px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: #172d43;
+}
+
+
+.sin-ramos span {
+    font-size: 14px;
+
+    color: #6b625b;
+}
+
+
+/* =========================================
+   BARRA INFERIOR
+========================================= */
+
+.mis-ramos-app .barra-inferior {
+    position: fixed;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    width: 393px;
+    max-width: 100%;
+
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+
+    margin: 0;
+
+    background: #89966b;
+
+    border-radius: 20px 20px 0 0;
+
+    z-index: 1000;
+
+    box-sizing: border-box;
+}
+
+
+.mis-ramos-app .barra-inferior button {
+    width: 50px;
+    height: 50px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 26px;
+
+    cursor: pointer;
+}
+
+

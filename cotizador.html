@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Cotizador</title>
+
+    <link rel="stylesheet" href="stilo.css">
+
+</head>
+
+
+<body>
+
+    <div class="app cotizador-app">
+
+
+        <!-- ENCABEZADO -->
+
+        <header class="cotizador-header">
+
+            <button
+                class="boton-regresar"
+                onclick="volverInicio()"
+            >
+                ←
+            </button>
+
+            <h1>Cotizador</h1>
+
+            <button
+                class="cerrar-cotizador"
+                onclick="volverInicio()"
+            >
+                ×
+            </button>
+
+        </header>
+
+
+        <!-- CONTENIDO -->
+
+        <main class="cotizador-contenido">
+
+
+            <h2>¿Qué deseas agregar?</h2>
+
+
+            <!-- TIPO DE PRODUCTO -->
+
+            <div class="selector-tipo">
+
+                <button
+                    id="botonFlores"
+                    class="tipo-seleccionado"
+                    onclick="mostrarFloresCotizador()"
+                >
+                    🌸
+                    Flor
+                </button>
+
+
+                <button
+                    id="botonMateriales"
+                    onclick="mostrarMaterialesCotizador()"
+                >
+                    🧵
+                    Material
+                </button>
+
+            </div>
+
+
+            <!-- TÍTULO -->
+
+            <h2 id="tituloListaCotizador">
+                Selecciona una flor
+            </h2>
+
+
+            <!-- LISTA -->
+
+            <div
+                id="listaCotizador"
+                class="lista-cotizador"
+            >
+
+            </div>
+
+
+
+            <!-- SELECCIONADOS -->
+
+            <div
+                id="seleccionadosCotizador"
+                class="seleccionados-cotizador"
+            >
+
+            </div>
+
+
+            <!-- BOTONES -->
+
+            <div class="acciones-cotizador">
+
+                <button
+                    class="boton-cancelar-cotizador"
+                    onclick="cancelarCotizador()"
+                >
+                    Cancelar
+                </button>
+
+
+                <button
+                    type="button"
+    class="boton-guardar-cotizador"
+    onclick="guardarCotizacion()"
+                >
+                    Guardar
+                </button>
+                
+
+            </div>
+
+
+        </main>
+
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

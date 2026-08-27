@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nuevo material</title>
+
+    <link rel="stylesheet" href="stilo.css">
+</head>
+
+<body>
+
+    <div class="app nuevo-material-app">
+
+        <!-- ENCABEZADO -->
+
+        <header class="nuevo-material-header">
+
+            <h1>Nuevo material</h1>
+
+            <button onclick="cerrarNuevoMaterial()">
+                ×
+            </button>
+
+        </header>
+
+
+        <!-- CONTENIDO -->
+
+        <main class="nuevo-material-contenido">
+
+            <!-- IMAGEN -->
+
+            <div class="imagen-material">
+
+                <input
+                    type="file"
+                    id="imagenMaterial"
+                    accept="image/*"
+                    onchange="mostrarImagen(event)"
+                >
+
+                <div id="contenedorImagen">
+
+                    <span>＋</span>
+
+                    <p>Agregar imagen</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- NOMBRE -->
+
+            <label for="nombreMaterial">
+                Nombre
+            </label>
+
+            <input
+                type="text"
+                id="nombreMaterial"
+                placeholder="Ej. Chenille"
+            >
+
+
+            <!-- PRECIO -->
+
+            <label for="precioMaterial">
+                Precio de compra (S/)
+            </label>
+
+            <input
+                type="number"
+                id="precioMaterial"
+                placeholder="0.00"
+                step="0.01"
+            >
+
+
+            <!-- CANTIDAD -->
+
+            <label for="cantidadMaterial">
+                Cantidad comprada
+            </label>
+
+            <input
+                type="number"
+                id="cantidadMaterial"
+                placeholder="0"
+                step="0.01"
+            >
+
+
+            <!-- CALCULAR -->
+
+            <button
+                class="boton-calcular"
+                onclick="calcularMaterial()"
+            >
+                Calcular
+            </button>
+
+
+            <!-- COSTO UNITARIO -->
+
+            <div class="resultado-costo">
+
+                <div>
+
+                    <span>Costo unitario</span>
+
+                    <strong id="costoUnitario">
+                        S/ 0.00
+                    </strong>
+
+                </div>
+
+                <span class="icono-calculadora">
+                    🖩
+                </span>
+
+            </div>
+
+
+            <!-- BOTONES -->
+
+            <div class="acciones-material">
+
+                <button
+                    class="boton-cancelar"
+                    onclick="cerrarNuevoMaterial()"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    class="boton-guardar"
+                    onclick="guardarMaterial()"
+                >
+                    Guardar
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
