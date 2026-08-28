@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "io.github.brunos123_lab.twa",
+        "sha256_cert_fingerprints": ["34:86:3A:2C:79:9F:D4:4A:BC:FB:E7:F8:F2:1F:48:CF:1D:A2:89:E7:0C:3A:A6:A3:47:68:26:A0:1E:DF:87:C3"]
+      }
+    }]
