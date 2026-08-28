@@ -85,14 +85,11 @@ function agregarFlor() {
         costo.textContent = "S/ 0.00";
     }
 
-// Abrir ventana primero
-modal.style.display = "flex";
-
-// Cargar materiales después
-try {
+    // Cargar nuevamente los materiales
     cargarMaterialesParaFlor();
-} catch (error) {
-    console.error("Error al cargar materiales:", error);
+
+    // Abrir ventana
+    modal.style.display = "flex";
 }
 
 function cerrarNuevaFlor() {
