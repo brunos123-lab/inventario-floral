@@ -804,17 +804,6 @@ function eliminarFlor(index) {
 
 function mostrarFloresCotizador() {
 
-    document.getElementById("botonFlores")
-    .classList.add("tipo-seleccionado");
-
-document.getElementById("botonMateriales")
-    .classList.remove("tipo-seleccionado");
-
-    const seleccionados =
-    JSON.parse(
-        localStorage.getItem("seleccionadosCotizador")
-    ) || [];
-
     const lista = document.getElementById("listaCotizador");
     const titulo = document.getElementById("tituloListaCotizador");
 
@@ -825,7 +814,9 @@ document.getElementById("botonMateriales")
     const flores =
         JSON.parse(localStorage.getItem("flores")) || [];
 
-    titulo.textContent = "Selecciona una flor";
+    if (titulo) {
+        titulo.textContent = "Selecciona una flor";
+    }
 
     lista.innerHTML = "";
 
@@ -849,19 +840,15 @@ document.getElementById("botonMateriales")
         tarjeta.className = "item-cotizador";
 
         tarjeta.innerHTML = `
-
             <div class="imagen-item-cotizador">
-
                 ${
                     flor.foto
                     ? `<img src="${flor.foto}" alt="${flor.nombre}">`
                     : `<span>🌸</span>`
                 }
-
             </div>
 
             <div class="info-item-cotizador">
-
                 <h3>${flor.nombre}</h3>
 
                 <p>
@@ -870,27 +857,26 @@ document.getElementById("botonMateriales")
                 </p>
 
                 <p class="cantidad-item">
-                   Cantidad: 0
+                    Cantidad: 0
                 </p>
 
                 <p class="subtotal-item">
-                     Subtotal: S/ 0.00
+                    Subtotal: S/ 0.00
                 </p>
-
             </div>
 
             <button
                 class="boton-sumar-cotizador"
-                onclick="sumarProductoCotizador('flor', ${index})"
-            >
+                onclick="sumarProductoCotizador('flor', ${index})">
                 +
             </button>
-
         `;
 
         lista.appendChild(tarjeta);
 
     });
+
+    actualizarCantidadesCotizador();
 }
 
 function sumarProductoCotizador(tipo, index) {
