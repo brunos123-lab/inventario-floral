@@ -10,7 +10,7 @@
   "description": "Aplicación para gestionar materiales, flores, ramos y calcular costos.",
   "icons": [
     {
-      "src": "/inventario-floral/icon-512.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
