@@ -1,19 +1,3 @@
-function irMateriales(event) {
-    if (event) {
-        event.stopPropagation();
-    }
-
-    alert("Materiales");
-}
-
-function irFlores(event) {
-    if (event) {
-        event.stopPropagation();
-    }
-
-    alert("Flores");
-}
-
 function irCotizador(event) {
 
     localStorage.removeItem("seleccionadosCotizador");
